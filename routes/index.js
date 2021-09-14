@@ -3,6 +3,7 @@ const router = express.Router();
 const jwt = require("jsonwebtoken");
 const LoginController = require("../controllers/login")
 const SignupController = require("../controllers/signup")
+const ProductController = require("../controllers/Products")
 
 
 var MongoClient = require('mongodb').MongoClient;
@@ -39,6 +40,8 @@ router.get('/Task', (req, res) => {
 
 router.get("/login", LoginController.login);
 router.post("/signup", SignupController.signup);
+router.post("/postProduct", ProductController.postProduct);
+router.post("/allProduct", ProductController.allProducts);
 
 router.get("/");
 module.exports = router;

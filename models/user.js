@@ -3,10 +3,15 @@ const Schema = mongoose.Schema
 
 const userSchema = new Schema({
 
-    subject: String,
+
     name: String,
     email: String,
     password: String,
+    arrProducts: [
+        {
+            productId: { type: Schema.Types.ObjectId, ref: 'product' }
+        }
+    ],
 })
 
 module.exports = mongoose.model('user', userSchema)

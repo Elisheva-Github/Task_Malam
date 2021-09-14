@@ -5,7 +5,7 @@ const User = require('../models/user');
 class Signup {
   signup = async (req, res) => {
     try {
-      const {name, id, email, password} = req.body; //Adress, phone ....
+      const { name, id, email, password } = req.body; //Adress, phone ....
       //Validations.
       //Check if user exists
 
